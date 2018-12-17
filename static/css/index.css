@@ -11,14 +11,14 @@ body{
     zoom: 1;
     left: 0;
     top: 0;
-    background: url('images/bg.jpeg') no-repeat;
+    background: url('../images/bg.jpeg') no-repeat;
     background-size: 100% 100%;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 h1{
-    margin: 20px;
+    margin: 30px 20px 20px 20px;
     padding: 20px;
     color: #35241b;
     text-align: center; 
@@ -39,7 +39,6 @@ input,button:focus {
     width: 450px;
     height: 35px;
     padding: 5px 10px;
-    border: 1px solid #000;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     background: #fff;
@@ -63,7 +62,7 @@ button{
     cursor: pointer;
 }
 .boxImg{
-    /* display: none; */
+    display: none;
 }
 button img{
     width: 20px;

@@ -8,52 +8,14 @@
 <body>
     <h1>书山有路勤为径,学海无涯苦做舟。</h1>
     <div class="main">
-        <!-- <form action="http://127.0.0.1:8080" method="GET"> -->
             <input id="inp" type="text">
             <button type="button" id="btn" title="解析">
-                <!-- <img src="images/icon.png" alt=""> -->
-                解析
+                <img src="images/icon.png" alt="">
             </button>
-        <!-- </form> -->
         <div class="boxImg">
             <img id="img" src="" alt="解析失败">
         </div>
-        </div>
-    <script>
-        var inp= document.getElementById('inp'),
-            img= document.getElementById('img'),
-            btn= document.getElementById('btn'),
-            iconImg= btn.firstElementChild,
-            boxImg= document.querySelector('.boxImg');
-        btn.onclick=function(){
-            inpUrl= inp.value;
-            var http= new XMLHttpRequest();
-            http.onreadystatechange= function(){
-            if(http.status == 200 && http.readyState == 4){
-                var msg= http.responseText;
-                console.log(msg);
-                img.src= msg;
-            }
-        }
-        //发送请求 带着url发送到服务端
-        http.open('GET', '/data?q=' + inpUrl);
-        http.send();
-     }    
-
-        // btn.onclick = function (){
-        //     console.log(img.width);
-        //     if(img.width > 100){
-        //         boxImg.style.display="block";
-        //     }else{
-        //         alert('解析失败')
-        //     }
-        // }
-        // btn.onmouseover= function (){
-        //     iconImg.src= "images/icon_hover.png";
-        // }
-        // btn.onmouseout= function (){
-        //     iconImg.src= "images/icon.png"
-        // }
-    </script>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>

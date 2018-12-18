@@ -2,18 +2,23 @@
 var inp= document.getElementById('inp'),
     img= document.getElementById('img'),
     btn= document.getElementById('btn'),
-    iconImg= btn.firstElementChild,
-    boxImg= document.querySelector('.boxImg');
+    iconImg= btn.childNodes[1],
+    boxImg= document.querySelector('.boxImg'),
+    title= document.getElementById('title'),
+    detail= document.getElementById('detail');
 btn.onclick=function(){
     inpUrl= inp.value;
     var http= new XMLHttpRequest();
     http.onreadystatechange= function(){
     if(http.status == 200 && http.readyState == 4){
+        // var msg= JSON.parse(http.responseText);
         var msg= http.responseText;
-        console.log(msg);
-        img.src= msg;
+        // console.log(JSON.parse(msg));
+        img.src= JSON.parse(msg).imgUrl;
+        title.innerHTML= JSON.parse(msg).title;
+        detail.innerHTML= JSON.parse(msg).detail;
         if(img.src){
-            boxImg.style.display="block";
+            img.style.display="block";
         }else{
             alert('解析失败')
         }

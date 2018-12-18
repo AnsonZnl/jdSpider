@@ -3,11 +3,14 @@
     padding: 0;
     margin: 0;
 }
+li{
+    list-style: none;
+}
 body{
     width: 100%;
     overflow-y: scroll;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
     zoom: 1;
     left: 0;
     top: 0;
@@ -28,8 +31,11 @@ h1{
     height: 400px;
     margin: 50px auto;
     padding: 30px;
-    /* background: #fff;
-    opacity: 0.9; */
+}
+.content{
+    padding: 5px;
+    background: #fff;
+    opacity: 0.9;
 }
 input,button:focus {
     outline: none;
@@ -58,8 +64,9 @@ button{
     background: linear-gradient(#bcbcbc,#aeaeae);
     cursor: pointer;
 }
-.boxImg{
+#img{
     display: none;
+    border: solid #ddd 1px;
 }
 button img{
     width: 20px;

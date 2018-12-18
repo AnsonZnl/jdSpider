@@ -8,12 +8,23 @@
 <body>
     <h1>书山有路勤为径,学海无涯苦做舟。</h1>
     <div class="main">
-            <input id="inp" type="text">
-            <button type="button" id="btn" title="解析">
-                <img src="images/icon.png" alt="">
-            </button>
-        <div class="boxImg">
-            <img id="img" src="" alt="解析失败">
+        <input id="inp" type="text">
+        <button type="button" id="btn" title="解析">
+            <img src="images/icon.png" alt="">
+        </button>
+        <div class="content">
+            <div>
+                <h3>标题：</h3>
+                <p id="title"></p>
+            </div>    
+            <div class="boxImg">
+                <h3>商品图片：</h3>
+                <img id="img" src="" alt="解析失败">
+            </div>
+            <div>
+                <h3>详情：</h3>
+                <div id="detail"></div>
+            </div>
         </div>
     </div>
     <script src="js/index.js"></script>
